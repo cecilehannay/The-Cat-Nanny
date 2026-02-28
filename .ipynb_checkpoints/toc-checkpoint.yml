@@ -1,10 +1,9 @@
 format: jb-book
-root: home
+root: index
 chapters:
-  - file: about
+  - file: about us
   - file: services
-  - file: updates
   - file: service-area
-  - file: testimonials
   - file: faq
+  - file: testimonials
   - file: contact
