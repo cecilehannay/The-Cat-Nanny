@@ -12,7 +12,7 @@ site:
   template: book-theme
   baseurl: /The-Cat-Nanny
   options:
-    footer: false
+    footer_text: "© The Cat Nanny — In-Home Care for Cats"
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png

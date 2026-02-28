@@ -10,6 +10,10 @@ project:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
 site:
   template: book-theme
+  baseurl: /The-Cat-Nanny
+  options:
+    footer_text: "© The Cat Nanny — In-Home Care for Cats"
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png
+
