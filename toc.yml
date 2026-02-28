@@ -1,7 +1,7 @@
 format: jb-book
 root: index
 chapters:
-  - file: about us
+  - file: about
   - file: services
   - file: faq
   - file: testimonials
