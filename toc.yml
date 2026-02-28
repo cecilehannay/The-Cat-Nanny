@@ -3,7 +3,6 @@ root: index
 chapters:
   - file: about us
   - file: services
-  - file: service-area
   - file: faq
   - file: testimonials
   - file: contact
