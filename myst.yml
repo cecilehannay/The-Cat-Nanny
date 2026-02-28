@@ -11,6 +11,8 @@ project:
 site:
   template: book-theme
   baseurl: /The-Cat-Nanny
+  options:
+    footer: false
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png
