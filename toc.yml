@@ -1,6 +1,7 @@
 format: jb-book
 root: index
 chapters:
+  - file: index
   - file: about
   - file: services
   - file: updates
