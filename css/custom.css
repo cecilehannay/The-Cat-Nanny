@@ -146,6 +146,33 @@ blockquote + p {
 }
 
 /* =========================================================
+   TESTIMONIALS — override MyST inner padding (real fix)
+   ========================================================= */
+
+/* MyST wraps blockquotes in an inner container */
+blockquote > div,
+blockquote > p,
+blockquote {
+  padding: 0.35rem 0.6rem !important;
+}
+
+/* If MyST uses a prose wrapper */
+.prose blockquote {
+  padding: 0.35rem 0.6rem !important;
+}
+
+/* Tighten vertical spacing between testimonials */
+blockquote {
+  margin: 1.1rem 0 0.3rem 0 !important;
+}
+
+/* Attribution line */
+blockquote + p {
+  margin-top: 0.2rem !important;
+  margin-bottom: 1.2rem !important;
+}
+
+/* =========================================================
    FOOTER (quiet credit)
    ========================================================= */
 
