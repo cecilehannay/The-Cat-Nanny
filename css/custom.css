@@ -5,7 +5,7 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #1f2937; /* slate-800 */
+  color: #1f2937;
   line-height: 1.65;
 }
 
@@ -18,30 +18,23 @@ body {
    HEADER CLEANUP (Remove MyST badge at top)
    ========================================================= */
 
-/* Exact match for MyST header badge */
-span.tracking-tight.sm\:mr-5 {
-  display: none !important;
-}
-
-/* Fallback */
+span.tracking-tight.sm\:mr-5,
 header span[class*="tracking-tight"] {
   display: none !important;
 }
 
-/* Remove any thin announcement banners */
 .myst-banner,
 .myst-topbar,
 .myst-announcement {
   display: none !important;
 }
 
-/* Reduce extra header padding */
 header {
   padding-top: 0 !important;
 }
 
 /* =========================================================
-   LEFT NAVIGATION (keep as-is, just polish)
+   LEFT NAVIGATION (keep, just light polish)
    ========================================================= */
 
 aside.myst-sidebar-left {
@@ -54,6 +47,7 @@ aside.myst-sidebar-left a {
 
 /* =========================================================
    REMOVE RIGHT "CONTENTS" / PAGE OUTLINE ONLY
+   (keep LEFT navigation)
    ========================================================= */
 
 aside.myst-sidebar-right,
@@ -72,30 +66,24 @@ aside.myst-sidebar--secondary,
    HEADINGS & HIERARCHY
    ========================================================= */
 
-/* Page title */
 h1 {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
 }
 
-/* Section titles (e.g. THE CAT NANNY) */
 h2 {
   font-size: 1.6rem;
   font-weight: 600;
-  text-transform: none;
-  letter-spacing: 0;
   margin-top: 2.5rem;
   margin-bottom: 0.8rem;
 }
 
-/* Subsections */
 h3 {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-/* Divider lines */
 hr {
   border: none;
   border-top: 1px solid #e5e7eb;
@@ -115,61 +103,57 @@ ul li {
 }
 
 ul li::marker {
-  color: #9ca3af; /* soft gray */
+  color: #9ca3af;
 }
 
 /* =========================================================
-   TESTIMONIALS (BLOCKQUOTES)
+   LINKS
    ========================================================= */
 
-blockquote {
-  margin: 2rem 0 0.75rem 0;
-  padding: 0.6rem 0.85rem;        /* ⬅ noticeably tighter */
-  border-left: 3px solid #e5e7eb;
-  background: #fafafa;
-  border-radius: 6px;
+a {
+  text-decoration: none;
 }
 
-blockquote p {
-  margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  font-style: italic;
-}
-
-/* Attribution line (— Name, Location) */
-blockquote + p {
-  margin-top: 0.4rem;
-  margin-bottom: 2rem;
-  font-size: 0.95rem;
-  color: #555;
+a:hover {
+  text-decoration: underline;
 }
 
 /* =========================================================
-   TESTIMONIALS — override MyST inner padding (real fix)
+   TESTIMONIALS (BLOCKQUOTES) — FINAL, TIGHT VERSION
    ========================================================= */
 
-/* MyST wraps blockquotes in an inner container */
-blockquote > div,
-blockquote > p,
-blockquote {
-  padding: 0.35rem 0.6rem !important;
+/* Reset any theme “card” styling inside blockquotes */
+html body blockquote,
+html body blockquote * {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
-/* If MyST uses a prose wrapper */
-.prose blockquote {
-  padding: 0.35rem 0.6rem !important;
+/* Rebuild a tight, clean testimonial box */
+html body blockquote {
+  margin: 1.0rem 0 0.3rem 0 !important;
+  padding: 0.35rem 0.55rem !important;  /* tighter */
+  background: #f7f7f7 !important;
+  border-left: 3px solid #e5e7eb !important;
+  border-radius: 4px !important;
 }
 
-/* Tighten vertical spacing between testimonials */
-blockquote {
-  margin: 1.1rem 0 0.3rem 0 !important;
+html body blockquote p {
+  font-style: italic !important;
+  line-height: 1.45 !important;
+  font-size: 1.02rem !important;
 }
 
-/* Attribution line */
-blockquote + p {
-  margin-top: 0.2rem !important;
-  margin-bottom: 1.2rem !important;
+/* Attribution line immediately after the quote */
+html body blockquote + p {
+  margin-top: 0.15rem !important;
+  margin-bottom: 0.95rem !important;   /* tighter spacing between quotes */
+  font-style: normal !important;
+  font-size: 0.93rem !important;
+  color: #555 !important;
 }
 
 /* =========================================================
@@ -190,89 +174,7 @@ footer .myst-footer-branding {
    SMALL QUALITY-OF-LIFE POLISH
    ========================================================= */
 
-/* Remove excessive margins after emojis in headings */
 h1 img,
 h2 img {
   margin-right: 0.4rem;
-}
-
-/* Smooth link behavior */
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* =========================================================
-   Tighten testimonial (MyST blockquote cards)
-   ========================================================= */
-
-/* Target the actual gray card container */
-.prose blockquote > div,
-.prose blockquote {
-  padding: 0.45rem 0.7rem !important;
-  margin: 0.8rem 0 0.2rem 0 !important;
-  min-height: unset !important;
-}
-
-/* Tighten text itself */
-.prose blockquote p {
-  margin: 0 !important;
-  line-height: 1.45 !important;
-  font-size: 1.02rem;
-}
-
-/* Reduce space before attribution */
-.prose blockquote + p {
-  margin-top: 0.15rem !important;
-  margin-bottom: 1.1rem !important;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* Optional: slightly lighter gray to reduce visual bulk */
-.prose blockquote > div {
-  background-color: #f7f7f7 !important;
-}
-
-/* =========================================================
-   FORCE-TIGHT BLOCKQUOTES (Testimonials)
-   This is a hard override that will win.
-   ========================================================= */
-
-/* 1) Nuke padding/background coming from theme utilities */
-html body blockquote,
-html body blockquote * {
-  background: transparent !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-/* 2) Rebuild a tight, editorial testimonial style */
-html body blockquote {
-  margin: 1.1rem 0 0.35rem 0 !important;
-  padding: 0.45rem 0.7rem !important;     /* tight */
-  background: #f7f7f7 !important;         /* light gray */
-  border-left: 3px solid #e5e7eb !important;
-  border-radius: 4px !important;
-}
-
-/* 3) Quote text */
-html body blockquote p {
-  font-style: italic !important;
-  line-height: 1.45 !important;
-  font-size: 1.02rem !important;
-}
-
-/* 4) Attribution line (the paragraph right after the quote) */
-html body blockquote + p {
-  margin-top: 0.2rem !important;
-  margin-bottom: 1.2rem !important;
-  font-style: normal !important;
-  font-size: 0.93rem !important;
-  color: #555 !important;
 }
