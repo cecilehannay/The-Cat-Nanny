@@ -294,3 +294,18 @@ h1.myst-fm-block-title + hr,
   margin-top: 0.2rem !important;
   margin-bottom: 0.5rem !important;
 }
+
+
+
+---
+
+## 2️⃣ **Copy/paste this into `css/custom.css` (once)**
+
+```css
+.about-photo {
+  display: block;
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
