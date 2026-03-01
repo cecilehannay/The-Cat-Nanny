@@ -1,19 +1,24 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
+
 project:
   id: 5c919598-ad6e-4dc7-a5be-858a8fd6d0b0
-  # title:
-  # description:
-  # keywords: []
-  # authors: []
-  # github:
-  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  title: The Cat Nanny
+  description: In-home care for cats in Louisville, Lafayette, and Boulder.
+  toc:
+    - file: index
+    - file: about
+    - file: services
+    - file: faq
+    - file: testimonials
+    - file: contact
+
 site:
   template: book-theme
   baseurl: /The-Cat-Nanny
   options:
-    footer_text: "© The Cat Nanny — In-Home Care for Cats"
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
-
+    options:
+    footer_text: "© The Cat Nanny — In-Home Care for Cats · Made with MyST"
+    extra_css:
+      - custom.css
+    

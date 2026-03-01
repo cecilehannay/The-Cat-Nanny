@@ -1,0 +1,20 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 5c919598-ad6e-4dc7-a5be-858a8fd6d0b0
+  # title: 
+  # description:
+  # keywords: []
+  exclude:
+  - README.md
+extends:
+  - toc.yml  
+site:
+  template: book-theme
+  baseurl: /The-Cat-Nanny
+  options:
+    footer_text: "© The Cat Nanny — In-Home Care for Cats"
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
+
