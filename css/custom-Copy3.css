@@ -193,29 +193,3 @@ h1 + h3,
 h1 + hr {
   margin-top: 0.4rem !important;
 }
-
-/* ================================
-   Tighten space after H1 headings
-   ================================ */
-
-/* Reduce bottom margin of H1 itself */
-.myst-content h1 {
-  margin-bottom: 0.5rem !important;
-}
-
-/* Reduce space added by MyST section wrapper */
-.myst-content section:has(> h1) {
-  margin-bottom: 0.75rem !important;
-  padding-bottom: 0 !important;
-}
-
-/* Remove extra divider spacing right after H1 */
-.myst-content h1 + hr {
-  margin-top: 0.4rem !important;
-  margin-bottom: 0.6rem !important;
-}
-
-/* Tighten space before first paragraph after H1 */
-.myst-content h1 + p {
-  margin-top: 0.5rem !important;
-}
