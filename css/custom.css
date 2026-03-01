@@ -1,5 +1,5 @@
 /* =========================================================
-   GLOBAL TYPOGRAPHY & LAYOUT POLISH
+   GLOBAL TYPOGRAPHY & LAYOUT
    ========================================================= */
 
 body {
@@ -9,34 +9,39 @@ body {
   line-height: 1.65;
 }
 
-/* Slightly narrower content for readability */
+/* Main content width (editorial, not docs) */
 .myst-content {
   max-width: 960px !important;
 }
 
+
 /* =========================================================
-   HEADER CLEANUP (Remove MyST badge at top)
+   HEADER CLEANUP (remove MyST branding)
    ========================================================= */
 
-span.tracking-tight.sm\:mr-5,
-header span[class*="tracking-tight"] {
+/* Hide "Made with MyST" badge */
+span.tracking-tight.sm\:mr-5 {
   display: none !important;
 }
 
+/* Remove any announcement bars */
 .myst-banner,
 .myst-topbar,
 .myst-announcement {
   display: none !important;
 }
 
+/* Remove extra header padding */
 header {
   padding-top: 0 !important;
 }
 
+
 /* =========================================================
-   LEFT NAVIGATION (keep, just light polish)
+   NAVIGATION
    ========================================================= */
 
+/* Left nav: light polish only */
 aside.myst-sidebar-left {
   font-size: 0.95rem;
 }
@@ -45,66 +50,78 @@ aside.myst-sidebar-left a {
   font-weight: 500;
 }
 
-/* =========================================================
-   REMOVE RIGHT "CONTENTS" / PAGE OUTLINE ONLY
-   (keep LEFT navigation)
-   ========================================================= */
-
-aside.myst-sidebar-right,
-aside.myst-toc-sidebar,
-aside.myst-secondary,
-aside.myst-sidebar--secondary,
+/* Remove RIGHT page outline ("Contents") only */
 .myst-outline,
-.myst-outline-header,
-.myst-page-toc,
-.myst-right-toc,
-.myst-aside-toc {
+.myst-outline-header {
   display: none !important;
 }
 
+
 /* =========================================================
-   HEADINGS & HIERARCHY
+   HEADINGS & SPACING (CLEAN + PREDICTABLE)
    ========================================================= */
 
-h1 {
+/* Page title */
+.myst-content h1 {
   font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.6rem !important;
 }
 
-h2 {
+/* Tighten section wrapper below H1 */
+.myst-content section:has(> h1) {
+  margin-bottom: 0.6rem !important;
+  padding-bottom: 0 !important;
+}
+
+/* Reduce space before content after H1 */
+.myst-content h1 + p,
+.myst-content h1 + h2,
+.myst-content h1 + hr {
+  margin-top: 0.4rem !important;
+}
+
+/* Section headers */
+.myst-content h2 {
   font-size: 1.6rem;
   font-weight: 600;
-  margin-top: 2.5rem;
-  margin-bottom: 0.8rem;
+  margin-top: 2.2rem;
+  margin-bottom: 0.7rem;
 }
 
-h3 {
+.myst-content h3 {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
+/* Divider */
 hr {
   border: none;
   border-top: 1px solid #e5e7eb;
-  margin: 2.5rem 0;
+  margin: 2rem 0;
 }
 
+
 /* =========================================================
-   LISTS (clean & intentional)
+   TEXT & LISTS
    ========================================================= */
+
+p {
+  margin: 0.7rem 0;
+}
 
 ul {
   padding-left: 1.4rem;
 }
 
 ul li {
-  margin: 0.5rem 0;
+  margin: 0.4rem 0;
 }
 
 ul li::marker {
   color: #9ca3af;
 }
+
 
 /* =========================================================
    LINKS
@@ -118,11 +135,12 @@ a:hover {
   text-decoration: underline;
 }
 
+
 /* =========================================================
-   TESTIMONIALS (BLOCKQUOTES) — FINAL, TIGHT VERSION
+   TESTIMONIALS (FINAL, TIGHT, CONTROLLED)
    ========================================================= */
 
-/* Reset any theme “card” styling inside blockquotes */
+/* Reset any theme styling */
 html body blockquote,
 html body blockquote * {
   background: transparent !important;
@@ -132,10 +150,10 @@ html body blockquote * {
   box-shadow: none !important;
 }
 
-/* Rebuild a tight, clean testimonial box */
+/* Build clean testimonial */
 html body blockquote {
-  margin: 1.0rem 0 0.3rem 0 !important;
-  padding: 0.35rem 0.55rem !important;  /* tighter */
+  margin: 1rem 0 0.25rem 0 !important;
+  padding: 0.35rem 0.55rem !important;
   background: #f7f7f7 !important;
   border-left: 3px solid #e5e7eb !important;
   border-radius: 4px !important;
@@ -147,17 +165,18 @@ html body blockquote p {
   font-size: 1.02rem !important;
 }
 
-/* Attribution line immediately after the quote */
+/* Attribution */
 html body blockquote + p {
   margin-top: 0.15rem !important;
-  margin-bottom: 0.95rem !important;   /* tighter spacing between quotes */
+  margin-bottom: 0.9rem !important;
   font-style: normal !important;
   font-size: 0.93rem !important;
   color: #555 !important;
 }
 
+
 /* =========================================================
-   FOOTER (quiet credit)
+   FOOTER
    ========================================================= */
 
 footer {
@@ -170,52 +189,12 @@ footer .myst-footer-branding {
   font-size: 0.85rem;
 }
 
+
 /* =========================================================
-   SMALL QUALITY-OF-LIFE POLISH
+   SMALL POLISH
    ========================================================= */
 
 h1 img,
 h2 img {
   margin-right: 0.4rem;
-}
-
-/* =========================================================
-   Tighten space after H1 page titles
-   ========================================================= */
-
-h1 {
-  margin-bottom: 0.8rem !important;  /* default is ~1.5–2rem */
-}
-
-h1 + p,
-h1 + h2,
-h1 + h3,
-h1 + hr {
-  margin-top: 0.4rem !important;
-}
-
-/* ================================
-   Tighten space after H1 headings
-   ================================ */
-
-/* Reduce bottom margin of H1 itself */
-.myst-content h1 {
-  margin-bottom: 0.5rem !important;
-}
-
-/* Reduce space added by MyST section wrapper */
-.myst-content section:has(> h1) {
-  margin-bottom: 0.75rem !important;
-  padding-bottom: 0 !important;
-}
-
-/* Remove extra divider spacing right after H1 */
-.myst-content h1 + hr {
-  margin-top: 0.4rem !important;
-  margin-bottom: 0.6rem !important;
-}
-
-/* Tighten space before first paragraph after H1 */
-.myst-content h1 + p {
-  margin-top: 0.5rem !important;
 }
