@@ -53,3 +53,16 @@ aside.myst-sidebar--secondary {
   max-width: 100% !important;
 }
 
+/* ================================
+   Hide the RIGHT "Contents" outline (keep left menu)
+   ================================ */
+
+/* Hide the entire page outline panel */
+.myst-outline {
+  display: none !important;
+}
+
+/* Safety: if the outline is wrapped differently, hide by its header class */
+.myst-outline-header {
+  display: none !important;
+}
