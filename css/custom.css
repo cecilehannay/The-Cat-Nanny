@@ -1,14 +1,29 @@
-/* Hide the top "Made with MyST" badge/banner (book-theme) */
-header a[href*="mystmd"],
-header a[href*="mystmd.org"],
-header a[href*="jupyterbook.org"],
-header :is(.myst-header__brand, .myst-brand, .myst-badge, .myst-banner, .myst-topbar, .myst-header__badge) {
+/* ================================
+   Hide "Made with MyST" header badge
+   ================================ */
+
+/* Exact match for the current MyST header text */
+span.tracking-tight.sm\:mr-5 {
   display: none !important;
 }
 
-/* In case it's in a thin top strip above the page */
+/* Fallback: any header span with MyST-style tracking */
+header span[class*="tracking-tight"] {
+  display: none !important;
+}
+
+/* Remove any thin top banner if it exists */
 .myst-banner,
 .myst-topbar,
 .myst-announcement {
   display: none !important;
+}
+
+/* ================================
+   Optional polish (safe to keep)
+   ================================ */
+
+/* Reduce excess top padding once badge is gone */
+header {
+  padding-top: 0 !important;
 }
