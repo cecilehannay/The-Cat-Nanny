@@ -237,3 +237,28 @@ h2 img {
 .myst-content h1 + p {
   margin-top: 0.25rem !important;
 }
+
+/* =========================================================
+   Fix spacing after MyST page title (real fix)
+   ========================================================= */
+
+/* The title itself already has mb-0, keep it explicit */
+.myst-fm-block-title {
+  margin-bottom: 0 !important;
+}
+
+/* The spacing comes from the container BELOW the title */
+.myst-fm-block-title + * {
+  margin-top: 0.4rem !important;
+}
+
+/* If the next thing is a divider created by ____ */
+.myst-fm-block-title + hr {
+  margin-top: 0.3rem !important;
+  margin-bottom: 0.6rem !important;
+}
+
+/* If the next thing is a section heading */
+.myst-fm-block-title + h2 {
+  margin-top: 0.5rem !important;
+}
