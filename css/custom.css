@@ -27,3 +27,17 @@ header span[class*="tracking-tight"] {
 header {
   padding-top: 0 !important;
 }
+
+
+/* Hide the page-level table of contents */
+.myst-toc,
+.myst-toc-container,
+nav[aria-label="Table of contents"],
+aside[aria-label="Table of contents"] {
+  display: none !important;
+}
+
+/* Let main content use the full width */
+.myst-content {
+  max-width: 100% !important;
+}
