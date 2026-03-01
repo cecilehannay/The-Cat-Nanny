@@ -2,12 +2,13 @@
 version: 1
 project:
   id: 5c919598-ad6e-4dc7-a5be-858a8fd6d0b0
-  # title:
+  # title: 
   # description:
   # keywords: []
-  # authors: []
-  # github:
-  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  exclude:
+  - README.md
+extends:
+  - toc.yml  
 site:
   template: book-theme
   baseurl: /The-Cat-Nanny
