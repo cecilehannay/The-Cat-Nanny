@@ -17,4 +17,8 @@ site:
   template: book-theme
   baseurl: /The-Cat-Nanny
   options:
-    footer_text: "© The Cat Nanny — In-Home Care for Cats"
+    options:
+    footer_text: "© The Cat Nanny — In-Home Care for Cats · Made with MyST"
+    extra_css:
+      - custom.css
+    

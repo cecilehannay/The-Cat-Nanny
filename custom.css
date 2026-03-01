@@ -1,0 +1,4 @@
+/* Hide "Made with MyST" header banner */
+.myst-header__brand {
+  display: none !important;
+}
