@@ -178,3 +178,18 @@ h1 img,
 h2 img {
   margin-right: 0.4rem;
 }
+
+/* =========================================================
+   Tighten space after H1 page titles
+   ========================================================= */
+
+h1 {
+  margin-bottom: 0.8rem !important;  /* default is ~1.5–2rem */
+}
+
+h1 + p,
+h1 + h2,
+h1 + h3,
+h1 + hr {
+  margin-top: 0.4rem !important;
+}
