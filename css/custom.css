@@ -74,7 +74,7 @@ aside.myst-sidebar-left a {
 
 /* H1 itself */
 .myst-content h1 {
-  margin-bottom: 0.35rem !important;
+  margin-bottom: 0.25rem !important;
 }
 
 /* Section wrapper around H1 */
@@ -87,7 +87,7 @@ aside.myst-sidebar-left a {
 .myst-content h1 + p,
 .myst-content h1 + h2,
 .myst-content h1 + hr {
-  margin-top: 0.25rem !important;
+  margin-top: 0.15rem !important;
 }
 
 /* Section headers */
