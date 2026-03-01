@@ -294,3 +294,36 @@ h1.myst-fm-block-title + hr,
   margin-top: 0.2rem !important;
   margin-bottom: 0.5rem !important;
 }
+
+/* =========================================================
+   Disable dark mode (force light theme)
+   ========================================================= */
+
+/* Prevent dark mode from ever activating */
+:root {
+  color-scheme: light !important;
+}
+
+/* Override any dark-mode styles */
+html.dark,
+html[data-theme="dark"],
+body.dark,
+.dark {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+/* Force light backgrounds everywhere */
+.dark * {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+/* Ensure links and borders stay readable */
+.dark a {
+  color: #2563eb !important;
+}
+
+.dark hr {
+  border-color: #e5e7eb !important;
+}
