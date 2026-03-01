@@ -28,3 +28,28 @@ header {
   padding-top: 0 !important;
 }
 
+/* ================================
+   Hide ONLY the right "CONTENTS" sidebar
+   (keep the left navigation)
+   ================================ */
+
+/* Many MyST themes mark the right sidebar as a secondary/toc sidebar */
+aside.myst-sidebar-right,
+aside.myst-toc-sidebar,
+aside.myst-secondary,
+aside.myst-sidebar--secondary {
+  display: none !important;
+}
+
+/* If the layout uses a dedicated toc container on the right */
+.myst-page-toc,
+.myst-right-toc,
+.myst-aside-toc {
+  display: none !important;
+}
+
+/* Let content expand when right sidebar is gone */
+.myst-content {
+  max-width: 100% !important;
+}
+
