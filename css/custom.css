@@ -236,3 +236,43 @@ a:hover {
 .prose blockquote > div {
   background-color: #f7f7f7 !important;
 }
+
+/* =========================================================
+   FORCE-TIGHT BLOCKQUOTES (Testimonials)
+   This is a hard override that will win.
+   ========================================================= */
+
+/* 1) Nuke padding/background coming from theme utilities */
+html body blockquote,
+html body blockquote * {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* 2) Rebuild a tight, editorial testimonial style */
+html body blockquote {
+  margin: 1.1rem 0 0.35rem 0 !important;
+  padding: 0.45rem 0.7rem !important;     /* tight */
+  background: #f7f7f7 !important;         /* light gray */
+  border-left: 3px solid #e5e7eb !important;
+  border-radius: 4px !important;
+}
+
+/* 3) Quote text */
+html body blockquote p {
+  font-style: italic !important;
+  line-height: 1.45 !important;
+  font-size: 1.02rem !important;
+}
+
+/* 4) Attribution line (the paragraph right after the quote) */
+html body blockquote + p {
+  margin-top: 0.2rem !important;
+  margin-bottom: 1.2rem !important;
+  font-style: normal !important;
+  font-size: 0.93rem !important;
+  color: #555 !important;
+}
