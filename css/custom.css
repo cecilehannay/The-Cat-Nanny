@@ -124,8 +124,8 @@ ul li::marker {
 
 blockquote {
   margin: 2rem 0 0.75rem 0;
-  padding: 0.9rem 1.1rem;          /* ⬅ reduced padding */
-  border-left: 4px solid #e5e7eb;
+  padding: 0.6rem 0.85rem;        /* ⬅ noticeably tighter */
+  border-left: 3px solid #e5e7eb;
   background: #fafafa;
   border-radius: 6px;
 }
