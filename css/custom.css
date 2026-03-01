@@ -68,17 +68,26 @@ aside.myst-sidebar-left a {
   margin-bottom: 0.6rem !important;
 }
 
-/* Tighten section wrapper below H1 */
+/* =========================================================
+   Ultra-tight spacing after H1
+   ========================================================= */
+
+/* H1 itself */
+.myst-content h1 {
+  margin-bottom: 0.35rem !important;
+}
+
+/* Section wrapper around H1 */
 .myst-content section:has(> h1) {
-  margin-bottom: 0.6rem !important;
+  margin-bottom: 0.35rem !important;
   padding-bottom: 0 !important;
 }
 
-/* Reduce space before content after H1 */
+/* First element after H1 */
 .myst-content h1 + p,
 .myst-content h1 + h2,
 .myst-content h1 + hr {
-  margin-top: 0.4rem !important;
+  margin-top: 0.25rem !important;
 }
 
 /* Section headers */
