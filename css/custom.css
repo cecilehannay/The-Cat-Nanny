@@ -207,3 +207,33 @@ h1 img,
 h2 img {
   margin-right: 0.4rem;
 }
+
+/* =========================================================
+   FORCE tighter space after H1 in MyST (wins vs Tailwind prose)
+   ========================================================= */
+
+/* Override Tailwind typography/prose heading spacing */
+.prose h1,
+.myst-content .prose h1,
+.myst-content h1 {
+  margin-bottom: 0.25rem !important;
+}
+
+/* If you have an underline line "____" (renders as <hr>), THIS is the big gap */
+.prose h1 + hr,
+.myst-content h1 + hr {
+  margin-top: 0.2rem !important;
+  margin-bottom: 0.6rem !important;
+}
+
+/* Tighten spacing before the next section title right after the hr */
+.prose hr + h2,
+.myst-content hr + h2 {
+  margin-top: 0.6rem !important;
+}
+
+/* Also tighten first paragraph after H1 (when there isn't an hr) */
+.prose h1 + p,
+.myst-content h1 + p {
+  margin-top: 0.25rem !important;
+}
