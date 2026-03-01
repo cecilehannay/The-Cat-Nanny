@@ -1,0 +1,14 @@
+/* Hide the top "Made with MyST" badge/banner (book-theme) */
+header a[href*="mystmd"],
+header a[href*="mystmd.org"],
+header a[href*="jupyterbook.org"],
+header :is(.myst-header__brand, .myst-brand, .myst-badge, .myst-banner, .myst-topbar, .myst-header__badge) {
+  display: none !important;
+}
+
+/* In case it's in a thin top strip above the page */
+.myst-banner,
+.myst-topbar,
+.myst-announcement {
+  display: none !important;
+}
