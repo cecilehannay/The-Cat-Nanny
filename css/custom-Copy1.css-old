@@ -1,0 +1,102 @@
+/* ================================
+   Hide "Made with MyST" header badge
+   ================================ */
+
+/* Exact match for the current MyST header text */
+span.tracking-tight.sm\:mr-5 {
+  display: none !important;
+}
+
+/* Fallback: any header span with MyST-style tracking */
+header span[class*="tracking-tight"] {
+  display: none !important;
+}
+
+/* Remove any thin top banner if it exists */
+.myst-banner,
+.myst-topbar,
+.myst-announcement {
+  display: none !important;
+}
+
+/* ================================
+   Optional polish (safe to keep)
+   ================================ */
+
+/* Reduce excess top padding once badge is gone */
+header {
+  padding-top: 0 !important;
+}
+
+/* ================================
+   Hide ONLY the right "CONTENTS" sidebar
+   (keep the left navigation)
+   ================================ */
+
+/* Many MyST themes mark the right sidebar as a secondary/toc sidebar */
+aside.myst-sidebar-right,
+aside.myst-toc-sidebar,
+aside.myst-secondary,
+aside.myst-sidebar--secondary {
+  display: none !important;
+}
+
+/* If the layout uses a dedicated toc container on the right */
+.myst-page-toc,
+.myst-right-toc,
+.myst-aside-toc {
+  display: none !important;
+}
+
+/* Let content expand when right sidebar is gone */
+.myst-content {
+  max-width: 100% !important;
+}
+
+/* ================================
+   Hide the RIGHT "Contents" outline (keep left menu)
+   ================================ */
+
+/* Hide the entire page outline panel */
+.myst-outline {
+  display: none !important;
+}
+
+/* Safety: if the outline is wrapped differently, hide by its header class */
+.myst-outline-header {
+  display: none !important;
+}
+
+/* ================================
+   Testimonial styling
+   ================================ */
+
+blockquote {
+  font-style: normal;
+  margin: 1.5rem 0 0.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #e5e7eb; /* soft gray */
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+blockquote p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+blockquote p {
+  font-style: italic;
+}
+
+/* Attribution line (— Name, Location) */
+blockquote + p,
+blockquote + em,
+blockquote + strong {
+  margin-top: 0.4rem;
+  margin-bottom: 1.8rem;
+  font-style: normal;
+  font-size: 0.95rem;
+  color: #555;
+}

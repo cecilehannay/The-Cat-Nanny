@@ -1,0 +1,228 @@
+/* =========================================================
+   The Cat Nanny — Site polish for MyST book-theme
+   Goal: professional service-site look (less "docs")
+   ========================================================= */
+
+
+/* ---------------------------
+   1) Remove doc-ish banners
+   --------------------------- */
+
+/* Hide "Made with MyST" header badge text */
+span.tracking-tight.sm\:mr-5 {
+  display: none !important;
+}
+
+/* Remove any thin top banner/announcement strip if present */
+.myst-banner,
+.myst-topbar,
+.myst-announcement {
+  display: none !important;
+}
+
+/* Reduce excess top padding once badge is gone */
+header {
+  padding-top: 0 !important;
+}
+
+
+/* ---------------------------
+   2) Layout: keep left nav, remove right Contents
+   --------------------------- */
+
+/* Hide the RIGHT page outline ("Contents") */
+.myst-outline,
+.myst-outline-header {
+  display: none !important;
+}
+
+/* Make the main reading column feel intentional (not full-bleed) */
+.myst-content {
+  max-width: 1100px !important;
+}
+
+/* Slightly reduce overly-wide page gutters on large screens */
+@media (min-width: 1024px) {
+  .myst-content {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+/* Keep left navigation visible and tidy (don’t change behavior, just polish) */
+nav a {
+  text-decoration: none;
+}
+
+
+/* ---------------------------
+   3) Typography: calm + readable
+   --------------------------- */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings: a touch less "manual/documentation", more brand */
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  margin-top: 0.2rem;
+  margin-bottom: 0.9rem;
+}
+
+h2 {
+  margin-top: 2.0rem;
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Paragraph spacing: consistent and airy */
+p {
+  line-height: 1.7;
+  margin: 0.75rem 0;
+}
+
+/* Lists: slightly tighter and cleaner */
+ul, ol {
+  margin: 0.75rem 0 1.0rem 1.25rem;
+}
+
+li {
+  margin: 0.25rem 0;
+}
+
+/* Horizontal rules: softer */
+hr {
+  border: none;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  margin: 1.75rem 0;
+}
+
+
+/* ---------------------------
+   4) Links: professional, subtle
+   --------------------------- */
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+
+/* ---------------------------
+   5) Callouts / emphasized text
+   --------------------------- */
+
+/* Make bold stand out but not shout */
+strong {
+  font-weight: 650;
+}
+
+/* Inline code: less developer-y */
+code {
+  font-size: 0.95em;
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+  background: rgba(148, 163, 184, 0.15);
+}
+
+
+/* ---------------------------
+   6) Buttons / form-like elements (when they appear)
+   --------------------------- */
+
+button, .button, a[role="button"] {
+  border-radius: 10px !important;
+}
+
+/* Search box / inputs if present */
+input, textarea {
+  border-radius: 10px !important;
+}
+
+
+/* ---------------------------
+   7) Testimonials: make blockquotes look intentional
+   --------------------------- */
+
+blockquote {
+  margin: 1.25rem 0 0.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #e5e7eb;
+  background: #fafafa;
+  border-radius: 10px;
+}
+
+blockquote p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Attribution line (the paragraph immediately after the blockquote) */
+blockquote + p {
+  margin-top: 0.35rem;
+  margin-bottom: 1.6rem;
+  font-style: normal;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+
+/* ---------------------------
+   8) Tables: simple + clean (if you add any later)
+   --------------------------- */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem 0;
+}
+
+th, td {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 0.6rem 0.7rem;
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+  font-weight: 650;
+}
+
+
+/* ---------------------------
+   9) Images: look intentional
+   --------------------------- */
+
+img {
+  border-radius: 12px;
+}
+
+
+/* ---------------------------
+   10) Footer: subtle
+   --------------------------- */
+
+footer {
+  opacity: 0.95;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
