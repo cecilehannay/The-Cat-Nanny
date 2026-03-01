@@ -262,3 +262,35 @@ h2 img {
 .myst-fm-block-title + h2 {
   margin-top: 0.5rem !important;
 }
+
+
+/* =========================================================
+   Fix space after MyST page title (container gap/padding)
+   ========================================================= */
+
+/* If the title lives in a flex/grid stack with GAP, kill that gap */
+*:has(> h1.myst-fm-block-title) {
+  row-gap: 0 !important;
+  gap: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Tighten spacing immediately after the title block */
+h1.myst-fm-block-title {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Tighten the element that follows the title block */
+h1.myst-fm-block-title + * {
+  margin-top: 0.15rem !important;
+  padding-top: 0 !important;
+}
+
+/* If you use ____ (hr) under the title, shrink hr margins */
+h1.myst-fm-block-title + hr,
+.myst-content hr {
+  margin-top: 0.2rem !important;
+  margin-bottom: 0.5rem !important;
+}
