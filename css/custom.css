@@ -204,3 +204,35 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* =========================================================
+   Tighten testimonial (MyST blockquote cards)
+   ========================================================= */
+
+/* Target the actual gray card container */
+.prose blockquote > div,
+.prose blockquote {
+  padding: 0.45rem 0.7rem !important;
+  margin: 0.8rem 0 0.2rem 0 !important;
+  min-height: unset !important;
+}
+
+/* Tighten text itself */
+.prose blockquote p {
+  margin: 0 !important;
+  line-height: 1.45 !important;
+  font-size: 1.02rem;
+}
+
+/* Reduce space before attribution */
+.prose blockquote + p {
+  margin-top: 0.15rem !important;
+  margin-bottom: 1.1rem !important;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Optional: slightly lighter gray to reduce visual bulk */
+.prose blockquote > div {
+  background-color: #f7f7f7 !important;
+}
