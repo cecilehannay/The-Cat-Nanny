@@ -157,7 +157,6 @@ html body blockquote * {
 html body blockquote {
   margin: 1rem 0 0.25rem 0 !important;
   padding: 0.35rem 0.55rem !important;
-  background: #f7f7f7 !important;
   border-left: 3px solid #e5e7eb !important;
   border-radius: 4px !important;
 }
