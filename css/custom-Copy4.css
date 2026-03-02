@@ -3,8 +3,8 @@
    ========================================================= */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #1f2937;
   line-height: 1.65;
 }
@@ -13,6 +13,7 @@ body {
 .myst-content {
   max-width: 960px !important;
 }
+
 
 /* =========================================================
    HEADER CLEANUP (remove MyST branding)
@@ -35,6 +36,7 @@ header {
   padding-top: 0 !important;
 }
 
+
 /* =========================================================
    NAVIGATION
    ========================================================= */
@@ -53,6 +55,7 @@ aside.myst-sidebar-left a {
 .myst-outline-header {
   display: none !important;
 }
+
 
 /* =========================================================
    HEADINGS & SPACING (CLEAN + PREDICTABLE)
@@ -107,6 +110,7 @@ hr {
   margin: 2rem 0;
 }
 
+
 /* =========================================================
    TEXT & LISTS
    ========================================================= */
@@ -127,6 +131,7 @@ ul li::marker {
   color: #9ca3af;
 }
 
+
 /* =========================================================
    LINKS
    ========================================================= */
@@ -138,6 +143,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 
 /* =========================================================
    TESTIMONIALS (FINAL, TIGHT, CONTROLLED)
@@ -177,6 +183,7 @@ html body blockquote + p {
   color: #555 !important;
 }
 
+
 /* =========================================================
    FOOTER
    ========================================================= */
@@ -190,6 +197,7 @@ footer .myst-footer-branding {
   opacity: 0.6;
   font-size: 0.85rem;
 }
+
 
 /* =========================================================
    SMALL POLISH
@@ -255,6 +263,7 @@ h2 img {
   margin-top: 0.5rem !important;
 }
 
+
 /* =========================================================
    Fix space after MyST page title (container gap/padding)
    ========================================================= */
@@ -286,10 +295,13 @@ h1.myst-fm-block-title + hr,
   margin-bottom: 0.5rem !important;
 }
 
-/* =========================================================
-   ABOUT PAGE IMAGES + RESPONSIVE GRID
-   ========================================================= */
 
+
+---
+
+## 2️⃣ **Copy/paste this into `css/custom.css` (once)**
+
+```css
 .about-photo {
   display: block;
   max-width: 240px;
@@ -311,7 +323,7 @@ h1.myst-fm-block-title + hr,
     grid-template-columns: 1fr;
   }
 
-  /* Optional: center the image on small screens */
+  /* optional: center the image on small screens */
   .about-photo {
     display: block;
     margin: 0 auto;
