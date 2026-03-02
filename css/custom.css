@@ -309,3 +309,23 @@ h1.myst-fm-block-title + hr,
   height: auto;
   border-radius: 10px;
 }
+
+/* Two columns on larger screens */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+/* One column on phones */
+@media (max-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* optional: center the image on small screens */
+  .about-photo {
+    display: block;
+    margin: 0 auto;
+  }
+}
