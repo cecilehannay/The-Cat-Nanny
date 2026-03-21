@@ -5,7 +5,7 @@ project:
   id: 5c919598-ad6e-4dc7-a5be-858a8fd6d0b0
   title: The Cat Nanny
   description: In-home care for cats in Louisville, Lafayette, and Boulder.
-  thumbnail: ./images/cat-nanny.jpg
+  thumbnail: ./images/The-Cat-Nanny-logo.png
   toc:
     - file: index
     - file: about
