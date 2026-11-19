@@ -1,8 +1,9 @@
+
 name: Deploy MyST site to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 env:
@@ -36,7 +37,7 @@ jobs:
         run: myst build --html
 
       - name: Add Google verification file
-        run: cp google01ce000260828be3.html _build/html/  
+        run: cp google01ce000260828be3.html _build/html/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -53,4 +54,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
         
