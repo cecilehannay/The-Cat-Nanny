@@ -15,6 +15,7 @@ project:
     - file: contact
 
 site:
+  title: "The Cat Nanny | Cat Sitting in Louisville, CO"
   template: book-theme
   baseurl: /The-Cat-Nanny
   options:
