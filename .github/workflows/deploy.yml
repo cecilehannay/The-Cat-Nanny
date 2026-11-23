@@ -36,6 +36,13 @@ jobs:
       - name: Build static HTML
         run: myst build --html
 
+     - name: Fix sitemap URLs for GitHub Pages
+        run: |
+          sed -i 's|http://localhost:3000|https://cecilehannay.github.io/The-Cat-Nanny|g' _build/html/sitemap.xml
+          if [ -f _build/html/robots.txt ]; then
+            sed -i 's|http://localhost:3000|https://cecilehannay.github.io/The-Cat-Nanny|g' _build/html/robots.txt
+          fi        
+
       - name: Add Google verification file
         run: cp google01ce000260828be3.html _build/html/
 
